@@ -1,0 +1,20 @@
+Erik Dekker
+CS 410
+6.9.2019
+Assignment 3: Refactoring Log
+
+Line 24-33: refactored names to be more descriptive instead of abbreviations
+
+Line 31: removed unused undo menu item
+
+Line 37, 39: removed separators
+
+Line 41: removed em.add(u) because undo is not implemented
+
+Line 56: removed undo setActionListerner and setActionCommand
+
+Line 116-118: removed undo ActionCommand implementation
+
+Line 71-115: extracted Actioncommands into separate methods instead to enhance readability and allow direct calling. 
+
+Line 44-54: Modified setActionListener to directly call action methods. Deleted all setActionCommands.
