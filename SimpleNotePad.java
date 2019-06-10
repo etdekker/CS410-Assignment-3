@@ -115,9 +115,11 @@ public class SimpleNotePad extends JFrame implements ActionListener{
 
 	//called by open() to update recent files list
 	private void updateRecentFiles(File file) {
-		//removes file from List if it was opened recently to avoid duplicates
-		if(recentFiles.contains(file)) {
+		if(recentFiles.contains(file)) { //removes file from List if it was opened recently to avoid duplicates
 			recentFiles.remove(file);
+		}
+		if(recentFiles.size() == 5) { //removes last item in list if size == 5
+			recentFiles.removeLast();
 		}
 		recentFiles.addFirst(file); //adds file being opened to top of List
 
