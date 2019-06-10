@@ -91,7 +91,8 @@ public class SimpleNotePad extends JFrame implements ActionListener{
 
 	//new feature: simple-replace method
 	private void action_simpleReplace(ActionEvent e) {
-		textPane.replaceSelection(JOptionPane.showInputDialog(new JFrame("Input"), "Replace or insert with:"));
+		String input = JOptionPane.showInputDialog(new JFrame("Input"), "Replace or insert with:");
+		if(input != null) textPane.replaceSelection(input);
 	}
 
 	//new feature: openRecent action method
